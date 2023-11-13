@@ -22,4 +22,12 @@ function createTabs() {
     tabDiv.appendChild(contactBtn);
 }
 
+function createMainDiv() {
+    const mainDiv = document.createElement('div');
+    mainDiv.classList.add('main');
+    document.body.appendChild(mainDiv);
+}
+
 createTabs();
+createMainDiv();
+homePage();
