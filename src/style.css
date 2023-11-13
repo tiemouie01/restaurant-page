@@ -1,0 +1,10 @@
+body {
+    background-image: url('../img/restaurant.jpg');
+    background-size: cover;
+    color: #FFF;
+}
+
+p {
+    width: 500px;
+    height: auto;
+}
