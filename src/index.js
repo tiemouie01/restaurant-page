@@ -1,21 +1,24 @@
 import './style.css';
 import homePage from './home.js';
 import menuPage from './menu.js';
+import contactPage from './contacts.js';
 
 function createTabs() {
     const contentDiv = document.getElementById('content');
+
     const tabDiv = document.createElement('div');
-    const homeBtn = document.createElement('button');
-    const menuBtn = document.createElement('button');
-    const contactBtn = document.createElement('button');
-
     tabDiv.classList.add('tabs');
+    
+    const homeBtn = document.createElement('button');
     homeBtn.classList.add('home');
-    menuBtn.classList.add('menu');
-    contactBtn.classList.add('contact');
-
     homeBtn.textContent = 'HOME';
     menuBtn.textContent = 'MENU';
+    
+    const menuBtn = document.createElement('button');
+    menuBtn.classList.add('menu');
+    
+    const contactBtn = document.createElement('button');
+    contactBtn.classList.add('contact');
     contactBtn.textContent = 'CONTACTS';
 
     contentDiv.appendChild(tabDiv);
@@ -31,7 +34,13 @@ function createMainDiv() {
     contentDiv.appendChild(mainDiv);
 }
 
+function addEventListeners() {
+    
+}
+
 createTabs();
 createMainDiv();
+addEventListeners()
 // homePage();
-menuPage();
+// menuPage();
+// contactPage();
