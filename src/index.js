@@ -12,9 +12,9 @@ function createTabs() {
     const homeBtn = document.createElement('button');
     homeBtn.classList.add('home');
     homeBtn.textContent = 'HOME';
-    menuBtn.textContent = 'MENU';
     
     const menuBtn = document.createElement('button');
+    menuBtn.textContent = 'MENU';
     menuBtn.classList.add('menu');
     
     const contactBtn = document.createElement('button');
@@ -34,13 +34,25 @@ function createMainDiv() {
     contentDiv.appendChild(mainDiv);
 }
 
-function addEventListeners() {
-    
+function removePreviousPage() {
+    const contentDiv = document.getElementById('content');
+    const oldMainDiv = document.querySelector('.main');
+    contentDiv.removeChild(oldMainDiv);
+    const newMainDiv = document.createElement('div');
+    newMainDiv.classList.add('main');
+    contentDiv.appendChild(newMainDiv);
+}
+
+function addEvent(page, pageFunction) {
+    const tab = document.querySelector(`.tabs .${page}`);
+    tab.addEventListener('click', () => {
+        removePreviousPage();
+        pageFunction();
+    });
 }
 
 createTabs();
 createMainDiv();
-addEventListeners()
-// homePage();
-// menuPage();
-// contactPage();
+addEvent('home',homePage);
+addEvent('menu',menuPage);
+addEvent('contact',contactPage);
