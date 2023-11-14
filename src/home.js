@@ -1,5 +1,5 @@
 export default function homePage() {
-    const mainDiv = document.getElementsByClassName('main');
+    const mainDiv = document.querySelector('.main');
     const heading = document.createElement('h1');
     const paragraph = document.createElement('p');
 

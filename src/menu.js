@@ -1,5 +1,5 @@
 export default function menuPage() {
-    const mainDiv = document.getElementsByClassName('main');
+    const mainDiv = document.querySelector('.main');
     const menuDivs = [];
 
     for (let i = 0; i < 4; i++) {

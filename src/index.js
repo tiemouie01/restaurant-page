@@ -1,7 +1,9 @@
 import './style.css';
 import homePage from './home.js';
+import menuPage from './menu.js';
 
 function createTabs() {
+    const contentDiv = document.getElementById('content');
     const tabDiv = document.createElement('div');
     const homeBtn = document.createElement('button');
     const menuBtn = document.createElement('button');
@@ -16,18 +18,20 @@ function createTabs() {
     menuBtn.textContent = 'MENU';
     contactBtn.textContent = 'CONTACTS';
 
-    document.body.appendChild(tabDiv);
+    contentDiv.appendChild(tabDiv);
     tabDiv.appendChild(homeBtn);
     tabDiv.appendChild(menuBtn);
     tabDiv.appendChild(contactBtn);
 }
 
 function createMainDiv() {
+    const contentDiv = document.getElementById('content');
     const mainDiv = document.createElement('div');
     mainDiv.classList.add('main');
-    document.body.appendChild(mainDiv);
+    contentDiv.appendChild(mainDiv);
 }
 
 createTabs();
 createMainDiv();
-homePage();
+// homePage();
+menuPage();
